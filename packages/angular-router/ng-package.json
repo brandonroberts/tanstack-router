@@ -1,0 +1,16 @@
+{
+  "$schema": "./node_modules/ng-packagr/ng-package.schema.json",
+  "lib": {
+    "entryFile": "src/index.ts"
+  },
+  "allowedNonPeerDependencies": [
+    "@tanstack/angular-store",
+    "@tanstack/router-core",
+    "@tanstack/history",
+    "jsesc",
+    "tiny-invariant",
+    "tiny-warning"
+  ],
+  "dest": "dist",
+  "deleteDestPath": false
+}

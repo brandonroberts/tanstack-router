@@ -1,0 +1,68 @@
+{
+  "name": "@tanstack/angular-router-devtools",
+  "version": "1.115.2",
+  "description": "Modern and scalable routing for Angular applications",
+  "author": "Tanner Linsley",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TanStack/router.git",
+    "directory": "packages/angular-router-devtools"
+  },
+  "homepage": "https://tanstack.com/router",
+  "funding": {
+    "type": "github",
+    "url": "https://github.com/sponsors/tannerlinsley"
+  },
+  "keywords": [
+    "angular",
+    "router",
+    "routing",
+    "async",
+    "async router",
+    "typescript"
+  ],
+  "scripts": {
+    "clean": "rimraf ./dist && rimraf ./coverage",
+    "test:eslint": "eslint",
+    "build": "ng-packagr -p ng-package.json -c tsconfig.lib.prod.json && premove ./dist/package.json",
+    "test:unit": "vitest"
+  },
+  "peerDependencies": {
+    "@angular/common": ">=20.0.0",
+    "@angular/core": ">=20.0.0",
+    "@angular/platform-browser-dynamic": ">=20.0.0",
+    "@tanstack/angular-router": "workspace:*",
+    "rxjs": "^7.8.0"
+  },
+  "dependencies": {
+    "@tanstack/router-devtools-core": "workspace:*",
+    "solid-js": "^1.9.5",
+    "tslib": "^2.3.0"
+  },
+  "files": [
+    "src",
+    "dist"
+  ],
+  "devDependencies": {
+    "@analogjs/vite-plugin-angular": "1.15.1-beta.3",
+    "@analogjs/vitest-angular": "1.15.1-beta.3",
+    "@tanstack/angular-router": "workspace:*",
+    "ng-packagr": "^20.0.0",
+    "premove": "^4.0.0",
+    "typescript": "~5.8.0"
+  },
+  "sideEffects": false,
+  "type": "module",
+  "types": "dist/index.d.ts",
+  "module": "dist/fesm2022/tanstack-angular-router-devtools.mjs",
+  "exports": {
+    "./package.json": {
+      "default": "./package.json"
+    },
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/fesm2022/tanstack-angular-router-devtools.mjs"
+    }
+  }  
+}
